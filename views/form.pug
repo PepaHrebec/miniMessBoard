@@ -1,0 +1,12 @@
+extends layout 
+
+block content 
+    header 
+        h1= 'Message Board'
+        p= 'speak your mind freely'
+    main
+        section.form-container 
+            form(method='POST' action='/new')
+                input(type='text', placeholder='Text' name='text' id='text')
+                input(type='text' placeholder='User' name='user' id='user')
+                button(type='submit' id='submit-btn')= 'post'
